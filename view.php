@@ -68,7 +68,7 @@ namespace langenoir1878;
 		<link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
 		<div class = "lay_content" align = "center">
 		<font color = "#FFFFFF">
-			<h2><?php print $img->getU(); ?></h2>
+			<h2>GALLERY</h2>
 			<p><?php print $img->getAuthor_name(); ?></p>
 			
 			<br>
@@ -110,7 +110,7 @@ namespace langenoir1878;
 		<br><br>
 		<div class = "left_side">
 		
-		
+		<a href = "<?php print $img->getU();?>">see the image</a>
 
 		</div>
 		<br>

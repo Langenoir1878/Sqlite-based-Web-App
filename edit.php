@@ -34,8 +34,7 @@ $img = $imgRepo->getIMGById($_POST['id']);
 ?>
 <style>
 .lay_content {
-    background-image: url("bg.png");
-    background-size: 1878px 1245px;
+
     background-color: black;
  	font-style: oblique;
     padding: 20px;
@@ -46,7 +45,7 @@ $img = $imgRepo->getIMGById($_POST['id']);
 .left_side {
 	margin-left: 20px;
 	width: 98%;
-    border:1px solid #00FF00;
+    border:1px solid black;
 }
 </style>
 <body background = "bg.png">
@@ -71,7 +70,7 @@ $img = $imgRepo->getIMGById($_POST['id']);
      */
 
     ?>
-   
+    &nbsp;&nbsp; <input type="submit" value="Save"> &nbsp; &nbsp;
     <a href = "Index.php"><font color="pink"> Back to the home page</font> </a>
 </form>
 <br><br><br><br>
@@ -104,7 +103,7 @@ $img = $imgRepo->getIMGById($_POST['id']);
 	$subjectErr = '';
 	$authorErr = '';
 
-	if (empty($imgSubject)){
+	if (empty($imgUrl)){
 	$formIsValid = false;
 	$subjectErr = 'Please enter the URL';
 	}
@@ -138,12 +137,12 @@ $img = $imgRepo->getIMGById($_POST['id']);
 		<title> Web Editor</title>
 		
 	</head>
-	<body background = "bg.png">
+	<body>
 		<div style="text-align: center;">
 
 		<br><br><br>
 
-		<h1><font color = "#00FF00"> - IMG updated - </font></h1>
+		<h1><font color = "black"> - IMG updated - </font></h1>
 
 		<br><br><br>
 		<p><a href = "Index.php"><font color = "yellow"> Back to the img dashboard</font></a></p>
@@ -162,21 +161,21 @@ $img = $imgRepo->getIMGById($_POST['id']);
 		<title> Web Editor</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
 	</head>
-	<body background = "bg.png">
+	<body background = "yellow">
 		
 			<br><br><br> &nbsp;&nbsp;&nbsp; 
-		<h1><font color="#00FF00"> &nbsp;&nbsp;&nbsp; Some parts are missing ~ </font></h1>
+		<h1><font color="black"> &nbsp;&nbsp;&nbsp; Some parts are missing ~ </font></h1>
 		<br><br>
 		<div class="left_side">
 		<form action="edit.php" method = "post">
 			<br><br><br>
 			<input type = "hidden" name = "imgId" value = "<?php print $_POST['imgId'];?>">
 			&nbsp;&nbsp;&nbsp; <label><font color = "red">* </font> 
-			IMG URL : <input type = "text" name="subject_line" style="color: white; background-color: transparent;" value ="<?php print $imgSubject; ?>">
+			IMG URL : <input type = "text" name="url" style="color: blue; background-color: transparent;" value ="<?php print $imgUrl ?>">
 			</label><font color = red> &nbsp; <?php print $subjectErr; ?> </font>
 			<br><br>
 			&nbsp;&nbsp;&nbsp;<label><font color = "red">* </font> 
-			Author name : <input type = "text" name="author_name" style="color: white; background-color: transparent;" value ="<?php print $imgAuthor; ?>">
+			Author name : <input type = "text" name="author_name" style="color: blue; background-color: transparent;" value ="<?php print $imgAuthor; ?>">
 			</label><font color = "red"> &nbsp; <?php print $authorErr; ?> </font>
 			<br><br>
     		

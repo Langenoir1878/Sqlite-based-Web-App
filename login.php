@@ -65,9 +65,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<form action="#" method="POST">
 			<h1><font color = "white"> Please sign in: </font></h1>
 			<br>
-			<label>Username: <input type="text" name="username" style="color: white; background-color: transparent;"></label><br>
+			<label><font color = "white">Username: </font><input type="text" name="username" style="color: white; background-color: transparent;"></label><br>
 			<br>
-			<label>Password:  <input type="password" name="password" style="color: white; background-color: transparent;"></label><br>
+			<label><font color="white">Password:  </font><input type="password" name="password" style="color: white; background-color: transparent;"></label><br>
 			<br><br>
 			<input type="submit" value = "Login">
 			<br>

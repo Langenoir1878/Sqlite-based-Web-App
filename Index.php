@@ -27,9 +27,8 @@ $imgList = $imgRepo->getAllIMGs();
 <html lang="en">
 <style>
 .lay_content {
-    background-image: url("bg.png");
+    background-color: yellow;
     background-size: 1459px 121px;
- 	font-style: oblique;
     padding: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -51,7 +50,7 @@ $imgList = $imgRepo->getAllIMGs();
 <title>DASHBOARD</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
 <div class = "lay_content" align = "center">
-<font color = "#FFFFFF"><h1> </h1></font>
+<font color = "black"><h1> GALLERY WEB APP</h1></font>
 <br>
 <br>
 <div style="text-align:right">
@@ -61,7 +60,7 @@ $imgList = $imgRepo->getAllIMGs();
 	&nbsp;&nbsp;&nbsp;&nbsp;
 	</div>
 <div style="text-align:left;">
-<a href="Index.php" class="btn btn-primary btn-lg active" role="button">
+<font color= "white"><a href="Index.php" role="button"></font>
 	 HOME </a>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="profile.php" class="btn btn-primary btn-lg active" role="button">
@@ -89,7 +88,7 @@ $imgList = $imgRepo->getAllIMGs();
 	//display the list of imgs
 	foreach($imgList as $img){
 		print '<li><a href="view.php?id=' . $img->getId(). '">' . $img->getU() .  
-		'<font color= "#00FFFF"> &nbsp; -By: &nbsp;' . $img->getAuthor_name() . '</font><font color="grey"></a></li><br>';
+		'<font color= "black"> &nbsp; -By: &nbsp;' . $img->getAuthor_name() . '</font><font color="grey"></a></li><br>';
 	}
 	/*
 	foreach ($imgList as $img ) {
