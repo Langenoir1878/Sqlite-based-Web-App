@@ -39,7 +39,7 @@ class SqliteIMGRepository implements IIMGRepository
             $stmh = $this->db->prepare("INSERT INTO IMGs (URL,AUTHOR) VALUES (:url, :author_name)");
 			
             $sl = $img->getU();
-            $stmh->bindParam(':subject_line', $sl);
+            $stmh->bindParam(':url', $sl);
             $an = $img->getAuthor_name();
             $stmh->bindParam(':author_name', $an);
            

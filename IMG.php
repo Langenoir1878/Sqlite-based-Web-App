@@ -15,18 +15,6 @@ class IMG{
 	private $author_name = "";
 	private $id = "";//will be uniqid();
 
-    /* 
-     * @constructor
-     */
-    public function __construct(){
-        //$this->id = uniqid();
-        //generate the unique id for each img obj
-        date_default_timezone_set('America/Chicago');
-        $this->create_date = date('j M Y - h:i:s A');
-        $this->modified_date = date('j M Y - h:i:s A');
-    }
-
-
     /*
      * @accessors to return string
      */
